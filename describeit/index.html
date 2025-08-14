@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        iframe {
+            border: none; /* Remove the outline */
+            transform: scale(0.7); /* Reduce scaling further */
+            transform-origin: top left;
+            width: 140%; /* Compensate for scaling */
+            height: 140vh; /* Compensate for scaling */
+        }
+
+        @media (max-width: 768px) {
+            iframe {
+                transform: scale(0.6); /* Adjust scaling for smaller screens */
+                width: 160%;
+                height: 160vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            iframe {
+                transform: scale(0.5); /* Further adjust scaling for very small screens */
+                width: 200%;
+                height: 200vh;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+            background-color: black;
+            color: gray;
+            font-family: monospace;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://describe-it.onrender.com?mobile=true"></iframe>
+</body>
+</html>

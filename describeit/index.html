@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <style>
         iframe {
-            border: none; /* Remove the outline */
-            transform: scale(0.7); /* Reduce scaling further */
+            border: none;
+            transform: scale(0.7);
             transform-origin: top left;
-            width: 140%; /* Compensate for scaling */
-            height: 140vh; /* Compensate for scaling */
+            width: 140%;
+            height: 140vh;
         }
 
         @media (max-width: 768px) {
             iframe {
-                transform: scale(0.6); /* Adjust scaling for smaller screens */
+                transform: scale(0.6);
                 width: 160%;
                 height: 160vh;
             }
@@ -22,7 +22,7 @@
 
         @media (max-width: 480px) {
             iframe {
-                transform: scale(0.5); /* Further adjust scaling for very small screens */
+                transform: scale(0.5);
                 width: 200%;
                 height: 200vh;
             }
@@ -31,7 +31,7 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent scrolling */
+            overflow: hidden;
             background-color: black;
             color: gray;
             font-family: monospace;

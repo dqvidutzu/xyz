@@ -1,56 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>ffsdavid.xyz</title>
     <style>
-        body {
-            background-color: black;
-            color: gray;
-            font-family: monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            flex-direction: column;
-        }
-        a {
-            text-decoration: none;
-            color: gray;
-            font-size: small;
-            font-size:1.2rem;
-            margin: 30px;
 
-        }
-        footer {
+        .ripple {
             position: absolute;
-            bottom: 10px;
-            text-align: center;
-            width: 100%;
-            color: gray;
-            left: 0;
-            font-size:15px;
-            font-weight: 900;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.171);
+            transform: scale(0);
+            animation: rippleAnim 0.4s linear;
+            border:none;
+        }
+        @keyframes rippleAnim {
+            to {
+                transform: scale(10);
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <a href="https://describeit.ffsdavid.xyz">describe.it</a>
-    <a href="https://mafia.ffsdavid.xyz">mafia (RO)</p>
-    <footer>
-        <p>(this website is a placeholder at the moment, a better one is being created now) <br/>ffsdavid.xyz © 2023 ffsdavid</p> 
+    <nav class="glass">
+        <h3>ffsdavid.xyz</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" id="abt">About</a></li>
+        </ul>
+    </nav>
+    <div id="game" class="glass">
+        <h2>About me</h2>
+        <div id="thirdcard" >
+            <p id="aboutme">
+    salut si bine ai venit pe <span style="color:red">ffsdavid.xyz</span>.  
+    am facut site ul asta de la zero in vscode folosind html si css, mai mult ca sa invat si sa experimentez cu design ul web.  
+    momentan nu e foarte complex, dar vreau sa il tin ca un loc unde adaug proiecte, idei si jocuri pe care le fac in timpul liber.  
+    imi place sa testez lucruri noi, sa ma joc cu codul si sa vad ce iese, asa ca site ul o sa se tot schimbe in timp.  
+    daca ai ajuns aici, ia asta ca pe un mic preview din ce lucrez si poate o sa gasesti ceva interesant pe parcurs.  
+    ramane de vazut cum o sa evolueze, dar clar nu o sa ramana gol prea mult timp.
+    <br>
+</p>
 
-    </footer>
+        </div>
+    </div>
+    <div class="glass about">
+        <p>------ Game Tab ------</p>
+        <div class="game-container">
+    <div class="game-descriptions">
+        <div class="mafiaro-game">
+            <p style="font-size:17px">- Mafia RO </p>
+            <p style="font-size:10px; width:80%">a game made in javascript, hosted on Render.com</p>
+        </div>
+        <div class="describeit-game">
+            <p style="font-size:17px">- describe.it</p>
+            <p style="font-size:10px">a simple game about words</p>
+                </div>
+    </div>
+    <div class="game-icons">
+        <div class="mafiaro-png icoon"></div>
+        <div class="describeit-png icoon"></div>
+    </div>
+</div>
+
+        
+    </div>
+    <footer>
+        <p>© 2025 ffsdavid.xyz <br>made with ❤️ by ffsdavid</p>
+    <script>
+        document.addEventListener("click", e => {
+            const r = document.createElement("span")
+            r.className = "ripple"
+            document.body.appendChild(r)
+            const s = 100
+            r.style.width = r.style.height = s + "px"
+            r.style.left = e.clientX - s / 2 + "px"
+            r.style.top = e.clientY - s / 2 + "px"
+            setTimeout(() => r.remove(), 700)
+        })
+    document.querySelector('.mafiaro-png').addEventListener('click', () => {
+        window.location.href = 'https://mafia.ffsdavid.xyz';
+    });
+    document.querySelector('.describeit-png').addEventListener('click', () => {
+        window.location.href = 'https://describeit.ffsdavid.xyz';
+    });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

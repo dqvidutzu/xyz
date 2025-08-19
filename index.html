@@ -67,6 +67,17 @@
 
         
     </div>
+    <div class="glass contact">
+        <p>------ Contact ------</p>
+        <p>email: owner@ffsdavid.xyz</p>
+        <p>Phone: +40 696 969</p>
+        <p>Address: 308 Negra Arroyo Lane, Albuquerque, NM</p>
+        </div>
+        <div id="quote" class="glass">
+    <h2>Quote of the Day</h2>
+    <p id="dailyQuote">"Your daily quote will appear here."</p>
+</div>
+
     <footer>
         <p>© 2025 ffsdavid.xyz <br>made with ❤️ by ffsdavid</p>
     <script>
@@ -86,6 +97,20 @@
     document.querySelector('.describeit-png').addEventListener('click', () => {
         window.location.href = 'https://describeit.ffsdavid.xyz';
     });
+    fetch('https://api.api-ninjas.com/v1/quotes', {
+  method: 'GET',
+  headers: {
+    'X-Api-Key': 'zxaItafm+lxSuGkn2UpGrg==0Rb3JLBHmXzMIIVY'
+  }
+})
+  .then(response => response.json())
+  .then(data => {
+    const quote = data[0].quote;
+    const author = data[0].author;
+    document.getElementById('dailyQuote').innerHTML = `"${quote}" — ${author}`;
+  })
+  .catch(error => console.error('Error fetching quote:', error));
+
     </script>
 </body>
 </html>

@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-image: url("bg.png");
+    background-image: url("res/bg.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -149,7 +149,7 @@ footer {
 .mafiaro-png {
     width: 50px;
     height: 50px;
-    background-image: url("mafiaro.png");
+    background-image: url("res/mafiaro.png");
     background-size: cover;
     background-position: center;
     margin-bottom:30px;
@@ -157,7 +157,7 @@ footer {
 .describeit-png {
     width: 50px;
     height: 50px;
-    background-image: url("describe.it.png");
+    background-image: url("res/describe.it.png");
     background-size: cover;
     background-position: center;
 }

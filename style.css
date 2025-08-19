@@ -28,7 +28,7 @@ nav {
     z-index: 99999999999999;
 }
 nav ul {
-    display:flex; 
+    display:flex;
     justify-content: center;
     list-style: none;
     text-decoration: none;
